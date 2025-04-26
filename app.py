@@ -11,7 +11,7 @@ import requests
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 st.set_page_config(layout="wide")
-st.title("Прогноз посещаемости сайта с помощью GRU")
+st.title("Методы прогнозирования посещаемости веб-сайтов")
 
 # Выбор источника данных
 source = st.radio("Источник данных:", ["CSV-файл", "Wikipedia API"])
