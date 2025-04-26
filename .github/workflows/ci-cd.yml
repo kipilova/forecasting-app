@@ -49,5 +49,5 @@ jobs:
 
     - name: Deploy to server (пример с Docker)
       run: |
-        docker build -t myapp .  # Замените на ваш Dockerfile
+        docker build -t myapp .
         docker run -d -p 80:80 myapp
