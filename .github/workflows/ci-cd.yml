@@ -47,7 +47,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Deploy to server (пример с Docker)
+    - name: Deploy to server
       run: |
         docker build -t myapp .
         docker run -d -p 80:80 myapp
