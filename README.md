@@ -26,3 +26,15 @@ https://forecasting-app-kipilova.streamlit.app
 - Прогноз по тестовой выборке.
 - Визуализация реальных данных и прогноза.
 - Вычисление метрик качества.
+
+## Пример работы приложения
+
+![image](https://github.com/user-attachments/assets/40d1ab73-ce55-4b17-b000-2e58a4e67ceb)
+![image](https://github.com/user-attachments/assets/61601dc0-638d-432e-a4a9-f33f9aea4c88)
+![image](https://github.com/user-attachments/assets/219453a6-19fd-45a5-a34e-fb26c4e27018)
+![image](https://github.com/user-attachments/assets/93867da0-09b3-4372-afa9-77cd75b82559)
+![image](https://github.com/user-attachments/assets/1eb02763-8b03-4a3c-bfdb-29583747a23c)
+
+
+
+
