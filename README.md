@@ -5,19 +5,30 @@
 
 ## Как запустить локально
 1. Клонируйте репозиторий:
+   
    git clone https://github.com/yourusername/forecasting-app.git
+   
    cd forecasting-app
-2. Создайте и активируйте виртуальное окружение (не обьязательно):
+   
+3. Создайте и активируйте виртуальное окружение (не обьязательно):
+   
    python -m venv venv
+   
    source venv/bin/activate  # Linux / macOS
+   
    venv\Scripts\activate     # Windows
-3. Установите зависимости:
+   
+5. Установите зависимости:
+   
    pip install -r requirements.txt
-4. Запустите приложение:
+   
+7. Запустите приложение:
+   
    streamlit run app.py
 
 ## Онлайн-версия
 Приложение развернуто на Streamlit Community Cloud и доступно по ссылке:
+
 https://forecasting-app-kipilova.streamlit.app
 
 ## Возможности приложения
