@@ -43,10 +43,10 @@ def run_gru_forecast(df, epochs=50, batch_size=32, mode='test', future_days=365)
 
     # Построение модели GRU #
     model = Sequential([
-        GRU(50, return_sequences=True, input_shape=input_shape),  # Первый GRU слой
-        GRU(50, return_sequences=False),  # Второй GRU слой
-        Dense(25),  # Полносвязный слой
-        Dense(1)  # Выходной слой
+        GRU(50, return_sequences=True, input_shape=input_shape),
+        GRU(50, return_sequences=False),
+        Dense(25),
+        Dense(1)
     ])
 
     model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')

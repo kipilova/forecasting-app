@@ -7,7 +7,7 @@ def run_arima_forecast(df, mode='test'):
     df = df.copy()
 
     # === Подготовка данных ===
-    df['views'] = np.log1p(df['views'])  # логарифмируем
+    df['views'] = np.log1p(df['views'])
 
     # Удаление выбросов
     Q1 = df['views'].quantile(0.25)

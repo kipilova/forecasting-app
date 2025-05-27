@@ -9,13 +9,11 @@ from model_lstm_dwt import run_dwt_lstm_forecast
 from model_analog import run_analog_forecast
 import pandas as pd
 import numpy as np
-import requests
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 st.set_page_config(layout="wide")
 st.title("Методы прогнозирования посещаемости веб-сайтов")
 
-# Выбор источника данных
 source = st.radio("Источник данных:", ["CSV-файл", "Wikipedia API"])
 
 df = None
@@ -23,7 +21,6 @@ df = None
 if 'df' not in st.session_state:
     st.session_state.df = None
 
-# Загрузка данных #
 if source == "CSV-файл":
     uploaded_file = st.file_uploader("Загрузите CSV-файл с колонками 'date' и 'views'", type="csv")
     if uploaded_file:
@@ -51,7 +48,6 @@ elif source == "Wikipedia API":
 if st.session_state.df is not None:
     df = st.session_state.df.copy()
 
-    # Убедимся, что 'date' — колонка и установим её как индекс
     if 'date' not in df.columns and df.index.name == 'date':
         df = df.reset_index()
 

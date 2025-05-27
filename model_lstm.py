@@ -41,7 +41,7 @@ def run_lstm_forecast(df, epochs=50, batch_size=32, mode='test', future_days=365
     X_train, X_test = X[:split], X[split:]
     y_train, y_test = y[:split], y[split:]
 
-    # Построение модели LSTM #
+    # Построение модели LSTM
     model = Sequential([
         LSTM(50, return_sequences=True, input_shape=input_shape),
         LSTM(50, return_sequences=False),

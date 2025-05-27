@@ -54,7 +54,6 @@ def run_dwt_arima_forecast(df, mode='test'):
     y_pred = forecast_final[:len(y_true)]
     forecast_index = df_test.index[:len(y_true)]
 
-    # === Формируем DataFrame прогноза ===
     forecast_df = pd.DataFrame({
         'date': forecast_index,
         'real': y_true,

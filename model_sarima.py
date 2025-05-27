@@ -7,7 +7,7 @@ def run_sarima_forecast(df, mode='test'):
     df = df.copy()
 
     # === Подготовка данных ===
-    df['views'] = np.log1p(df['views'])  # логарифмируем
+    df['views'] = np.log1p(df['views'])
 
     # Удаление выбросов
     Q1 = df['views'].quantile(0.25)
@@ -53,7 +53,6 @@ def run_sarima_forecast(df, mode='test'):
     y_pred = np.expm1(forecast_log)
     y_true = np.expm1(y_test)
 
-    # Подготовка DataFrame для вывода и графиков
     forecast_df = pd.DataFrame({
         'date': df_test.index[:len(y_true)],
         'real': y_true,

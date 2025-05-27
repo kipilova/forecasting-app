@@ -11,7 +11,7 @@ def create_sequences_multifeature(data, seq_length):
     X, y = [], []
     for i in range(len(data) - seq_length):
         X.append(data[i:i+seq_length])
-        y.append(data[i+seq_length, 0])  # target = первый признак (views)
+        y.append(data[i+seq_length, 0])
     return np.array(X), np.array(y)
 
 def run_dwt_lstm_forecast(df, mode='test', seq_length=10):
@@ -28,7 +28,6 @@ def run_dwt_lstm_forecast(df, mode='test', seq_length=10):
     A, D = pywt.dwt(df['views'].values, wavelet)
     dow = df['day_of_week'].values[:len(A)]
 
-    # Масштабируем
     scaler_A = MinMaxScaler()
     scaler_D = MinMaxScaler()
     scaler_dow = MinMaxScaler()
@@ -39,7 +38,7 @@ def run_dwt_lstm_forecast(df, mode='test', seq_length=10):
 
     combined_data = np.hstack((A_scaled, D_scaled, dow_scaled))
 
-    # Делим на train/test
+    # разделение данных
     split = int(0.8 * len(combined_data))
     train_data = combined_data[:split]
     test_data = combined_data[split:]

@@ -5,11 +5,10 @@ import time
 def run_analog_forecast(df, mode='test'):
     df = df.copy()
 
-    # Убедимся, что дата — индекс
     if not isinstance(df.index, pd.DatetimeIndex):
         raise ValueError("Индекс датафрейма должен быть pd.DatetimeIndex")
 
-    # Логарифмируем просмотры
+    # Логарифмирование
     df['views'] = np.log1p(df['views'])
 
     # Разделение на train/test
