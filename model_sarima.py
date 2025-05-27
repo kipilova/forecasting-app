@@ -3,7 +3,7 @@ import time
 import numpy as np
 import pandas as pd
 
-def run_arima_forecast(df, mode='test'):
+def run_sarima_forecast(df, mode='test'):
     df = df.copy()
 
     # === Подготовка данных ===
@@ -28,13 +28,15 @@ def run_arima_forecast(df, mode='test'):
     # === Обучение модели ===
     model = auto_arima(
         y_train,
-        seasonal=False,
+        seasonal=True,
+        m=7,  # недельная сезонность
         stepwise=True,
+        trace=True,
         suppress_warnings=True,
-        max_p=5, max_q=5, max_d=2,
-        start_p=0, start_q=0,
+        start_p=0, start_q=0, start_P=0, start_Q=0,
+        max_p=3, max_q=3, max_d=2,
+        max_P=2, max_Q=2, max_D=1,
         error_action='ignore',
-        trace=False
     )
     start_fit = time.perf_counter()
     model.fit(y_train)
