@@ -39,12 +39,11 @@ https://forecasting-app-kipilova.streamlit.app
 
 ## Пример работы приложения
 
-![image](https://github.com/user-attachments/assets/40d1ab73-ce55-4b17-b000-2e58a4e67ceb)
-![image](https://github.com/user-attachments/assets/61601dc0-638d-432e-a4a9-f33f9aea4c88)
-![image](https://github.com/user-attachments/assets/219453a6-19fd-45a5-a34e-fb26c4e27018)
-![image](https://github.com/user-attachments/assets/93867da0-09b3-4372-afa9-77cd75b82559)
-![image](https://github.com/user-attachments/assets/1eb02763-8b03-4a3c-bfdb-29583747a23c)
-
-
-
+![image](https://github.com/user-attachments/assets/6295d75f-3a3d-4114-8ad9-2ec5f9853c1d)
+![image](https://github.com/user-attachments/assets/c4c63d26-0224-47ba-8a4c-524314111b1c)
+![image](https://github.com/user-attachments/assets/b35a3316-fa6d-4cb6-8d81-9b80713dceab)
+![image](https://github.com/user-attachments/assets/834b1aa3-1089-47f2-aead-47776717beb6)
+![image](https://github.com/user-attachments/assets/467173e6-202a-4ccd-8d85-71e447b39c95)
+![image](https://github.com/user-attachments/assets/8dc819e7-973c-4212-bebf-832e8aa5aa8c)
+![image](https://github.com/user-attachments/assets/d8bff5e3-515d-448b-8a3f-9c371f6e943b)
 
